@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Membership Portal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #1e90ff;
+        }
+        .plans, .benefits, .about-gym {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            margin: 0;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to FitLife Gym</h1>
+    </header>
+    <nav>
+        <a href="#membership">Membership</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#about-gym">Why Choose Us?</a>
+    </nav>
+    <div class="container">
+        <!-- Membership Plans Section -->
+        <div id="membership" class="section">
+            <h2>Our Membership Plans</h2>
+            <div class="plans">
+                <div class="card">
+                    <h3>Basic Plan</h3>
+                    <p>Price: $20/month</p>
+                    <ul>
+                        <li>Access to gym equipment</li>
+                        <li>Locker facilities</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Premium Plan</h3>
+                    <p>Price: $50/month</p>
+                    <ul>
+                        <li>Access to gym equipment</li>
+                        <li>Locker facilities</li>
+                        <li>Personal trainer sessions</li>
+                        <li>Group fitness classes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div id="benefits" class="section">
+            <h2>Benefits of Joining FitLife</h2>
+            <div class="benefits">
+                <div class="card">
+                    <h3>Physical Wellness</h3>
+                    <p>Improve strength, stamina, and overall health through regular workouts.</p>
+                </div>
+                <div class="card">
+                    <h3>Mental Well-being</h3>
+                    <p>Reduce stress and boost confidence with exercises tailored to your needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Professional Support</h3>
+                    <p>Work with certified trainers and access top-notch equipment.</p>
+                </div>
+                <div class="card">
+                    <h3>Community</h3>
+                    <p>Be part of a supportive and motivating community of fitness enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Gym Section -->
+        <div id="about-gym" class="section">
+            <h2>Why Choose FitLife Gym?</h2>
+            <div class="about-gym">
+                <div class="card">
+                    <h3>Modern Facilities</h3>
+                    <p>Our gym is equipped with the latest equipment and fitness tools to support every workout routine.</p>
+                </div>
+                <div class="card">
+                    <h3>Flexible Membership</h3>
+                    <p>We offer plans that fit your schedule and budget, with no hidden fees.</p>
+                </div>
+                <div class="card">
+                    <h3>Inclusive Environment</h3>
+                    <p>We welcome people of all fitness levels and create a friendly space for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 FitLife Gym. All Rights Reserved.
+    </footer>
+</body>
+</html>

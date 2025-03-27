@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+</head>
+<body>
+    <h1>Attendance</h1>
+    <form action="{{ url_for('mark_attendance') }}" method="post">
+        <select name="member_id">
+            {% for id, member in members.items() %}
+                <option value="{{ id }}">{{ member.name }}</option>
+            {% endfor %}
+        </select>
+        <input type="date" name="attendance_date" required>
+        <button type="submit">Mark Attendance</button>
+    </form>
+    
+    <h2>Attendance Records</h2>
+    <ul>
+        {% for id, member in members.items() %}
+            <li>{{ member.name }}:
+                <ul>
+                    {% for date in member.attendance %}
+                        <li>{{ date }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

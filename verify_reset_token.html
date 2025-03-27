@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Reset Token</title>
+</head>
+<body>
+    <h2>Verify Reset Token</h2>
+    <form method="POST" action="{{ url_for('verify_reset_token') }}">
+        <label for="token">Enter the Reset Token Sent to Your Email:</label><br>
+        <input type="text" name="token" required><br><br>
+        <button type="submit">Verify Token</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+</body>
+</html>

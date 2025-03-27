@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Gym Management System</title>
+    <link rel="stylesheet" href="..//static/css/style5.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 class="logo"><img class="icon-size" src="..//static/images/ig2.png">GymTym</h1>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/membership">Membership</a></li>
+            <li><a href="/user_registeration">Registration</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/admin_registration" class="ctn">admin</a></li>
+        </ul>
+        <img src="..//static/images/ig1.png" alt="" class="menu-btn">
+    </nav>
+        <script>
+            const  menuBtn = document.querySelector('.menu-btn');
+            const navlinks = document.querySelector('.nav-links');
+    
+            menuBtn.addEventListener('click',()=>{
+                navlinks.classList.toggle('mobile-menu')
+            })
+    
+        </script>
+          {% block content %}
+          {% endblock %}
+    <footer>
+        <p>© 2025 GymFlex. All rights reserved.</p>
+    </footer>
+</body>
+</html>

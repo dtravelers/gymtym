@@ -1,0 +1,103 @@
+{% extends "main_layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    {% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+    <title>Gym Management System</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="..//static/css/style1.css">
+
+</head>
+<body>
+ 
+    <div class="container">
+        {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div><h3 class="h3">
+        {{message}}</h3>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+        <div class="form-box login">
+          
+            <form action="/admin_login_verify" method="post">
+               
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input name="email" type="email" for="email" id="email" placeholder="Email" required>
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input  name="password" type="password" for="password" id="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+             <!--   <div class="forgot-link">
+                    <a href="#">Forgot Password?</a>
+                </div>-->
+                <button type="submit" class="btn" value="submit">Login</button>
+                <p>or login with social platforms</p>
+               <!-- <div class="social-icons">
+                    <a href="#"><i class='bx bxl-google'></i></a>
+                    <a href="#"><i  class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-github' ></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+               
+                </div>-->
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="/admin_submit" method="post">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input name="name" type="text"  for="name" id="name" placeholder="username" required>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-box">
+                    <input name="email" type="email" for="email" id="email" placeholder="eg:example@gmail.com" required>
+                    <i class='bx bx-envelope'></i>
+                </div>
+               <div class="input-box">
+                    <input  name="password" type="password" for="password" id="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                
+                <button type="admin_submit" class="btn" value="admin_submit">Register</button>
+                <p>Already Register? login now</p>
+               
+            </form>
+        </div>
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                 <h1>Hello,Welcome!</h1>
+                 <p>Don't have an account?</p>
+                 <button class="btn register-btn">Register</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                 <h1>Welcome Back!</h1>
+                 <p>Already have an account?</p>
+                 <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const  container = document.querySelector('.container');
+         const registerBtn = document.querySelector('.register-btn');
+         const loginBtn = document.querySelector('.login-btn');
+ 
+         registerBtn.addEventListener('click',()=>{
+             container.classList.add('active')
+         })
+         loginBtn.addEventListener('click',()=>{
+             container.classList.remove('active')
+         }) 
+    </script>
+    {% endblock %}
+</body>
+</html>

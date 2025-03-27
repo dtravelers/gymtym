@@ -1,0 +1,176 @@
+{% extends "admin_layout.html" %}
+<!DOCTYPE html>
+{% block content %}
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="admin_dashboard.css">
+    </head>
+    <style>
+      /* admin_dashboard.css */
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styling */
+.card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    color: #007bff;
+}
+
+/* Table Styling */
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Admin Actions Section */
+.text-center {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+    </style>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Admin Dashboard</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Memberships</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fa fa-user fa-2x"></i>
+                            <h5 class="card-title mt-2">Total Users</h5>
+                            <p class="card-text">100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fa fa-address-card fa-2x"></i>
+                            <h5 class="card-title mt-2">Active Memberships</h5>
+                            <p class="card-text">50</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fa fa-bar-chart fa-2x"></i>
+                            <h5 class="card-title mt-2">Reports Generated</h5>
+                            <p class="card-text">20</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fa fa-cogs fa-2x"></i>
+                            <h5 class="card-title mt-2">Settings</h5>
+                            <p class="card-text">Customize</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h3 class="text-center">Admin Actions</h3>
+                    <table class="table table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Action</th>
+                                <th>Description</th>
+                                <th>Manage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Manage Users</td>
+                                <td>View and edit user information.</td>
+                                <td><button class="btn btn-primary btn-sm">Go</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Manage Memberships</td>
+                                <td>Handle membership details and status.</td>
+                                <td><button class="btn btn-primary btn-sm">Go</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Generate Reports</td>
+                                <td>Get analytics and summary data.</td>
+                                <td><button class="btn btn-primary btn-sm">Go</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Settings</td>
+                                <td>Adjust platform configurations.</td>
+                                <td><button class="btn btn-primary btn-sm">Go</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+    {% endblock %}
+    </html>
+    
