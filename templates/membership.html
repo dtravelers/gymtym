@@ -1,0 +1,121 @@
+{% extends "main_layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Gym Membership</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background:linear-gradient(90deg,#ffbebe,#b7c7ff);
+            color: #333;
+            padding-top: 120px;
+        }
+        header {
+            background-color:   #ec015f;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 850px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #1e90ff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .membership-plan {
+            margin: 15px 0;
+        }
+        .membership-plan h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .membership-plan p {
+            margin: 5px 0;
+        }
+        .benefits ul {
+            list-style: square;
+            padding-left: 20px;
+        }
+        .benefits li {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FitLife Gym: Your Path to Wellness</h1>
+    </header>
+    <div class="container">
+        <!-- Membership Section -->
+        <div class="section">
+            <h2>Membership Plans</h2>
+            <div class="membership-plan">
+                <h3>Basic Plan</h3>
+                <p><strong>Price:</strong> $20/month</p>
+                <p>Ideal for beginners, offering:</p>
+                <ul>
+                    <li>Access to all gym equipment</li>
+                    <li>Free locker facilities</li>
+                </ul>
+            </div>
+            <div class="membership-plan">
+                <h3>Premium Plan</h3>
+                <p><strong>Price:</strong> $50/month</p>
+                <p>Perfect for fitness enthusiasts, with added benefits:</p>
+                <ul>
+                    <li>Access to gym equipment</li>
+                    <li>Locker facilities</li>
+                    <li>Dedicated personal trainer sessions</li>
+                    <li>Access to group fitness classes</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="section">
+            <h2>Why Join FitLife Gym?</h2>
+            <p>Our gym offers more than just a place to work out. Here’s why FitLife Gym is the best choice for your fitness journey:</p>
+            <ul class="benefits">
+                <li><strong>Improves Physical Health:</strong> Regular exercise strengthens your body, boosts your immune system, and increases endurance.</li>
+                <li><strong>Enhances Mental Well-being:</strong> Working out reduces stress, anxiety, and depression, while improving your overall mood.</li>
+                <li><strong>Access to Professional Equipment:</strong> We provide state-of-the-art machines and tools to suit all fitness levels.</li>
+                <li><strong>Builds Community:</strong> Engage in group classes and meet like-minded people in a supportive environment.</li>
+                <li><strong>Promotes Discipline:</strong> Establish a consistent routine to stay healthy and motivated.</li>
+            </ul>
+           
+        </div>
+    </div>
+    <hr>
+    <br>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Gym Dashboard</title>
+    <link rel="stylesheet" href="..//static/css/style2.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Welcome,{{session['user_name']}}</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/dash">Add membership</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="/user_logout">Logout</a></li>
+            </ul>
+        </nav>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div><h3 class="h3">
+            {{message}}</h3>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        {% block content %}
+        {% endblock %}
+        <main>
+            <!-- Profile Section -->
+            <section id="home">
+                <h2>Profile</h2>
+                <p><strong>Membership:</strong> Gold</p>
+                <p><strong>Joined:</strong></p>
+                <p><strong>Renewal Date:</strong></p>
+            </section>
+
+            <!-- Workout Schedule Section -->
+            <section id="schedule">
+                <h2>Workout Schedule</h2>
+                <ul>
+                    <li>Monday: Cardio and Strength</li>
+                    <li>Wednesday: Yoga</li>
+                    <li>Friday: Full Body Workout</li>
+                </ul>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress">
+                <h2>Progress</h2>
+                <div id="progress-bar">
+                    <div class="progress" style="width: 70%;">70% of Goal Achieved</div>
+                </div>
+            </section>
+
+            <!-- Goals Section -->
+            <section id="goals">
+                <h2>Goals</h2>
+                <ul>
+                    <li>Lose 5 kg in 3 months</li>
+                    <li>Increase bench press by 10 kg</li>
+                    <li>Improve stamina with weekly 5 km runs</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Your Gym. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        // script.js
+
+// Example: Update progress dynamically
+document.addEventListener('DOMContentLoaded', () => {
+    const progress = document.querySelector('.progress');
+    progress.style.width = '70%'; // Example: Progress is 70%
+});
+
+    </script>
+</body>
+</html>

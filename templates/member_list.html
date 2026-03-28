@@ -1,0 +1,115 @@
+{% extends "admin_layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title></title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px;
+  }
+
+  table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  thead {
+    background-color: #007bff;
+    color: white;
+  }
+
+  thead th {
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  tbody td {
+    padding: 12px 15px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  table th, table td {
+    border: 1px solid #dee2e6;
+  }
+
+  u {
+    text-decoration: none;
+    border-bottom: 3px solid #007bff;
+  }
+
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+</style>
+
+</style>
+       <body>
+              <u><h1>Membership List</h1></u>  
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Plan Name</th>
+                    <th>Address</th>
+                    <th>Charges</th>
+                    <th>Phone No</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>User Name</th> <!-- New column -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                <tr>
+                    <td>{{ record.member_id }}</td>
+                    <td>{{ record.plan_name }}</td>
+                    <td>{{ record.address }}</td>
+                    <td>{{ record.charges }}</td>
+                    <td>{{ record.phone_no }}</td>
+                    <td>{{ record.start_date }}</td>
+                    <td>{{ record.end_date }}</td>
+                    <td>{{ record.user_name }}</td> <!-- Display user name -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+    </div>
+    </div></div></center>
+
+</body>
+{% endblock %}
+</html>
